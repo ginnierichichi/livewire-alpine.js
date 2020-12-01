@@ -30,6 +30,7 @@
       <change afterPath="$PROJECT_DIR$/public/webfonts/fa-solid-900.woff2" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/date.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/input/file-upload.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/group.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/rich-text.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/text.blade.php" afterDir="false" />
@@ -209,7 +210,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606470458183</updated>
-      <workItem from="1606470459528" duration="47932000" />
+      <workItem from="1606470459528" duration="50999000" />
     </task>
     <servers />
   </component>
@@ -232,10 +233,10 @@
       <screen x="-5120" y="-325" width="2560" height="1415" />
     </state>
     <state x="-4102" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1606483158199" />
-    <state x="-4075" y="264" key="NewPhpFileDialog" timestamp="1606754834092">
+    <state x="-4075" y="264" key="NewPhpFileDialog" timestamp="1606840265344">
       <screen x="-5120" y="-325" width="2560" height="1415" />
     </state>
-    <state x="-4075" y="264" key="NewPhpFileDialog/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1606754834092" />
+    <state x="-4075" y="264" key="NewPhpFileDialog/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1606840265344" />
     <state x="-4294" y="-15" width="838" height="1032" key="search.everywhere.popup" timestamp="1606819534741">
       <screen x="-5120" y="-325" width="2560" height="1415" />
     </state>

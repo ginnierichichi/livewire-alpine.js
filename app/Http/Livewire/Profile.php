@@ -13,7 +13,7 @@ class Profile extends Component
     public $about = '';
     public $birthday = null;
     public $newAvatar;
-    public $newAvatars = [];
+//    public $newAvatars = [];
 //    public $saved = false;            how to show a flash message with just livewire
 
     public function mount()
