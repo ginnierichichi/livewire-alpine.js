@@ -30,19 +30,23 @@
                         <x-input.rich-text wire:model.lazy="about" id="about" :initial-value="$about" />
                     </x-input.group>
 
-                    <x-input.group label="Photo" for="photo" :error="$errors->first('newAvatar')">
+                    <x-input.group label="Photo" for="photo" :error="$errors->first('newAvatars.*')">
                         <div class="flex items-center">
                             <span class="h-12 w-12 rounded-full overflow-hidden bg-gray-100">
                                 <img class="inline-block h-9 w-9 rounded-full" src="{{ auth()->user()->avatarUrl() }}" alt="Profile Photo" >
                             </span>
 
                             <span class="ml-5 rounded-md shadow-sm">
-                                <input type="file" wire:model="newAvatar">
+                                <input type="file" wire:model="newAvatars" multiple>
 
 {{--                                <button type="button" class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out">--}}
 {{--                                    Change--}}
 {{--                                </button>--}}
                             </span>
+
+                            @foreach($newAvatars as $avatar)
+                                <img src="{{ $avatar->temporaryUrl() }}" alt="">
+                            @endforeach
                         </div>
                     </x-input.group>-
                 </div>
