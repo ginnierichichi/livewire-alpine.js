@@ -138,7 +138,7 @@
             </main>
         </div>
 
-        <x-notification />
+{{--        <x-notification />--}}
 
 {{--    @yield('content')--}}
 

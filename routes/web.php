@@ -32,7 +32,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //    return view('profile');
 //})->name('profile');
 
-Route::get('/profile' , App\Http\Livewire\Profile::class);
+Route::get('/profile' , App\Http\Livewire\Profile::class)->middleware('auth');;
 
 //Route::get('/dashboard' , App\Http\Livewire\Dashboard::class)->layout('');
 //

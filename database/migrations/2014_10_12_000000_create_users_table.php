@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('username')->nullable();
             $table->text('about')->nullable();
             $table->date('birthday')->nullable();
-            $table->string('photo')->nullable();
+            $table->string('avatars')->nullable();
 //            $table->foreignId('current_team_id')->nullable();
 //            $table->text('profile_photo_path')->nullable();
             $table->timestamps();

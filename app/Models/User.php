@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Storage;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
@@ -29,7 +30,8 @@ class User extends Authenticatable
         'password',
         'username',
         'about',
-        'birthday'
+        'birthday',
+        'avatars'
     ];
 
     /**
@@ -61,11 +63,14 @@ class User extends Authenticatable
      */
     protected $appends = [
         'profile_photo_url',
+        'avatars'
     ];
 
     public function avatarUrl()
     {
-        return 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($this->email)));
+        return $this->avatars
+        ? asset($this->avatars)
+        : 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($this->email)));
     }
 
 //    public function profile()

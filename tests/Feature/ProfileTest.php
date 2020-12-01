@@ -3,9 +3,12 @@
 namespace Tests\Feature;
 
 use App\Models\User;
+use GuzzleHttp\Psr7\UploadedFile;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Support\Facades\Storage;
 use Livewire\Livewire;
+use phpDocumentor\Reflection\File;
 use Tests\TestCase;
 
 
@@ -98,5 +101,25 @@ class ProfileTest extends TestCase
             ->set('about', str_repeat('a', 141))
             ->call('save')
             ->assertHasErrors(['about' => 'max']);
+    }
+
+    /**@test*/
+    function can_upload_avatar()
+    {
+        $user = User::factory()->create();
+
+        $file = UploadedFile::fake()->image('avatar.jpg');
+
+        Storage::fake('avatars');
+
+        Livewire::actingAs($user)
+            ->test('profile')
+            ->set('newAvatar', $file)
+            ->call('save');
+
+        $user->refresh();
+
+        $this->assertNotNull($user->avatar);
+        Storage::disk('avatars')->assertExists($user->avatar);
     }
 }
