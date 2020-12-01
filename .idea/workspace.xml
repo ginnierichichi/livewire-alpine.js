@@ -12,6 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1e48d078-b3ca-4c6e-93e2-a49e5954c05e" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../livewire/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/surgelogo.svg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/webfonts/fa-brands-400.eot" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/webfonts/fa-brands-400.svg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/webfonts/fa-brands-400.ttf" afterDir="false" />
@@ -189,6 +190,7 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/img" />
       <recent name="$PROJECT_DIR$/resources/views/livewire" />
     </key>
   </component>
@@ -206,7 +208,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606470458183</updated>
-      <workItem from="1606470459528" duration="32284000" />
+      <workItem from="1606470459528" duration="37843000" />
     </task>
     <servers />
   </component>
@@ -233,9 +235,9 @@
       <screen x="-5120" y="-325" width="2560" height="1415" />
     </state>
     <state x="-4075" y="264" key="NewPhpFileDialog/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1606754834092" />
-    <state x="-4294" y="-15" width="838" height="1032" key="search.everywhere.popup" timestamp="1606754959268">
+    <state x="-4294" y="-15" width="838" height="1032" key="search.everywhere.popup" timestamp="1606816636825">
       <screen x="-5120" y="-325" width="2560" height="1415" />
     </state>
-    <state x="-4294" y="-15" width="838" height="1032" key="search.everywhere.popup/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1606754959268" />
+    <state x="-4294" y="-15" width="838" height="1032" key="search.everywhere.popup/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1606816636825" />
   </component>
 </project>

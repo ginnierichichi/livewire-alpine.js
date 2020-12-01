@@ -63,6 +63,11 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+    public function avatarUrl()
+    {
+        return 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($this->email)));
+    }
+
 //    public function profile()
 //    {
 //        return $this->belongsTo(User::class, 'username');
