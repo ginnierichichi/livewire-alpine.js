@@ -31,8 +31,10 @@
       <change afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/date.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/file-upload.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/input/filepond.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/group.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/rich-text.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/input/stack.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/text.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/textarea.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/notification.blade.php" afterDir="false" />
@@ -210,7 +212,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606470458183</updated>
-      <workItem from="1606470459528" duration="50999000" />
+      <workItem from="1606470459528" duration="55071000" />
     </task>
     <servers />
   </component>
@@ -233,13 +235,13 @@
       <screen x="-5120" y="-325" width="2560" height="1415" />
     </state>
     <state x="-4102" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1606483158199" />
-    <state x="-4075" y="264" key="NewPhpFileDialog" timestamp="1606840265344">
+    <state x="-4075" y="264" key="NewPhpFileDialog" timestamp="1606899673214">
       <screen x="-5120" y="-325" width="2560" height="1415" />
     </state>
-    <state x="-4075" y="264" key="NewPhpFileDialog/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1606840265344" />
-    <state x="-4294" y="-15" width="838" height="1032" key="search.everywhere.popup" timestamp="1606819534741">
+    <state x="-4075" y="264" key="NewPhpFileDialog/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1606899673214" />
+    <state x="-4294" y="-15" width="838" height="1032" key="search.everywhere.popup" timestamp="1606841425332">
       <screen x="-5120" y="-325" width="2560" height="1415" />
     </state>
-    <state x="-4294" y="-15" width="838" height="1032" key="search.everywhere.popup/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1606819534741" />
+    <state x="-4294" y="-15" width="838" height="1032" key="search.everywhere.popup/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1606841425332" />
   </component>
 </project>

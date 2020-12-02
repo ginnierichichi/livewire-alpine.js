@@ -19,10 +19,9 @@
 
     @livewireStyles
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@1.2.3/dist/trix.css">
+    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
     @stack('styles')
     <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
-
 
 </head>
 <body class="font-sans antialiased ">
@@ -162,6 +161,10 @@
 
 @livewireScripts
 <script src="https://unpkg.com/trix@1.2.3/dist/trix.js"></script>
+<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+<script src="{{ mix('js/app.js') }}" defer></script>
 @stack('scripts')
+
+
 </body>
 </html>
