@@ -130,5 +130,7 @@
     <orderEntry type="library" name="pikaday" level="application" />
     <orderEntry type="library" name="moment" level="application" />
     <orderEntry type="library" name="trix" level="application" />
+    <orderEntry type="library" name="filepond" level="application" />
+    <orderEntry type="library" name="filepond-plugin-image-preview" level="application" />
   </component>
 </module>

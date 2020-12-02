@@ -34,7 +34,6 @@
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/filepond.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/group.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/rich-text.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/input/stack.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/text.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/textarea.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/notification.blade.php" afterDir="false" />
@@ -212,7 +211,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606470458183</updated>
-      <workItem from="1606470459528" duration="55071000" />
+      <workItem from="1606470459528" duration="58521000" />
     </task>
     <servers />
   </component>

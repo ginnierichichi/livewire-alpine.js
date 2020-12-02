@@ -30,8 +30,8 @@
                         <x-input.rich-text wire:model.lazy="about" id="about" :initial-value="$about" />
                     </x-input.group>
 
-                    <x-input.group label="Photo" for="photo" :error="$errors->first('newAvatar.*')">
-                        <x-input.filepond wire:model="newAvatar" />
+                    <x-input.group label="Photo" for="photo" :error="$errors->first('files.*')">
+                        <x-input.filepond wire:model="files" multiple />
 
 {{--                        <x-input.file-upload wire:model="newAvatar" id="photo">--}}
 {{--                            <span class="w-20 h-20 rounded-full overflow-hidden bg-gray-100">--}}
@@ -42,7 +42,6 @@
 {{--                                @endif--}}
 {{--                            </span>--}}
 {{--                        </x-input.file-upload>--}}
-
                     </x-input.group>
                 </div>
 

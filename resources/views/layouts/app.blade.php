@@ -20,15 +20,18 @@
     @livewireStyles
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@1.2.3/dist/trix.css">
     <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+    <!-- filepond -->
+        <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+
     @stack('styles')
     <!-- Scripts -->
-
+    <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 <body class="font-sans antialiased ">
-<div class="min-h-screen bg-gray-100">
+<div class="h-full bg-gray-100">
     @livewire('navigation-dropdown')
 
-    <div class="h-screen flex overflow-hidden bg-gray-100" x-data="{ sidebarOpen: false }" @keydown.window.escape="sidebarOpen = false">
+    <div class="min-h-screen flex overflow-hidden bg-gray-100" x-data="{ sidebarOpen: false }" @keydown.window.escape="sidebarOpen = false">
         <!-- Off-canvas menu for mobile -->
         <div x-show="sidebarOpen" class="md:hidden" style="display: none;">
             <div class="fixed inset-0 flex z-40">
@@ -161,10 +164,10 @@
 
 @livewireScripts
 <script src="https://unpkg.com/trix@1.2.3/dist/trix.js"></script>
+    <!-- add before </body> -->
+
+<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
 <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
-<script src="{{ mix('js/app.js') }}" defer></script>
 @stack('scripts')
-
-
 </body>
 </html>
