@@ -19,14 +19,11 @@ class Transaction extends Model
     protected $guarded = [];
     protected $casts = ['date' => 'date'];
     protected $appends = ['date_for_editing'];
-    /**
-     * @var mixed
-     */
-    private $status;
-    /**
-     * @var mixed
-     */
-    private $date;
+
+//    /**
+//     * @var mixed
+//     */
+//    private $date;
 
     public function getStatusColorAttribute()
     {
@@ -34,12 +31,12 @@ class Transaction extends Model
                 'processing' => 'orange',
                 'success' => 'green',
                 'failed' => 'red',
-            ][$this->status] ?? 'cool-gray';
+            ][strtolower($this->status)] ?? 'cool-gray';
     }
 
     public function getDateForHumansAttribute()
     {
-        return $this->date->format('M, d Y');
+        return $this->date->format('d, M Y');
     }
 
     public function getDateForEditingAttribute()
