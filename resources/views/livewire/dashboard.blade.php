@@ -14,7 +14,7 @@
             </x-slot>
 
             <x-slot name="body">
-                @foreach ($transactions as $transaction)
+                @forelse ($transactions as $transaction)
                     <x-table.row wire:loading.class.delay="opacity-50">
                         <x-table.cell>
                             <div class="flex">
@@ -22,7 +22,7 @@
                                     <!-- Heroicon name: cash -->
                                     <x-icon.cash class="text-cool-gray-400" />
 
-                                    <p class="text-gray-600 truncate group-hover:text-gray-900 transition ease-in-out duration-150">
+                                    <p class="text-gray-700 truncate group-hover:text-gray-900 transition ease-in-out duration-150">
                                         {{$transaction->title}}
                                     </p>
                                 </a>
@@ -44,7 +44,14 @@
                         </x-table.cell>
 
                     </x-table.row>
-                @endforeach
+                @empty
+                    <x-table.row>
+                        <x-table.cell>
+                            <x-icon.inbox />
+                            <span> No transactions match your search.</span>
+                        </x-table.cell>
+                    </x-table.row>
+                @endforelse
             </x-slot>
         </x-table>
 
