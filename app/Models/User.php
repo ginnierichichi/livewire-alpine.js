@@ -68,6 +68,7 @@ class User extends Authenticatable
 
     public function avatarUrl()
     {
+//        dd(asset('test'));
         return $this->avatars
         ? asset($this->avatars)
         : 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($this->email)));

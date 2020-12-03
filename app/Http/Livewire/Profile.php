@@ -12,8 +12,15 @@ class Profile extends Component
     public $username = '';
     public $about = '';
     public $birthday = null;
-    public $newAvatar;
+    public $upload;
     public $files = [];
+
+    protected $rules = [
+        'username' => 'max:24',
+        'about' => 'max:140',
+        'birthday' => 'sometimes',
+        'upload' => 'nullable|image|max:1000',
+    ];
 //    public $newAvatars = [];
 //    public $saved = false;            how to show a flash message with just livewire
 
@@ -26,7 +33,7 @@ class Profile extends Component
 
     public function updatedNewAvatar()
     {
-        $this->validate(['newAvatar' => 'image|max:1000']);
+        $this->validate(['upload' => 'image|max:1000']);
     }
 
 //    public function updated($field)     //this hides the toast message when typing into input field.
@@ -43,11 +50,10 @@ class Profile extends Component
             'username' => 'max:24',
             'about' => 'max:140',
             'birthday' => 'sometimes',
-            'newAvatar' => 'image|max:1000',
+            'upload' => 'image|max:1000',
         ]);
 
-       $filename = $this->newAvatar->store('avatars', 'public');
-
+       $filename = $this->upload->store('avatars', 'public');
         auth()->user()->update([
             'username' => $this->username,
             'about' => $this->about,

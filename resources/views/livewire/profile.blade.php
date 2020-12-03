@@ -1,4 +1,4 @@
-<div class="w-full">
+<div class="w-full bg-white overflow-hidden shadow-xl sm:rounded-lg">
        <div class="p-6">
             <h1 class="text-2xl font-semibold text-gray-900">Profile</h1>
 
@@ -30,8 +30,8 @@
                         <x-input.rich-text wire:model.lazy="about" id="about" :initial-value="$about" />
                     </x-input.group>
 
-                    <x-input.group label="Photo" for="photo" :error="$errors->first('files.*')">
-                        <x-input.filepond wire:model="files" multiple />
+                    <x-input.group label="Photo" for="photo" :error="$errors->first('upload.*')">
+                        <x-input.filepond wire:model="upload" />
 
 {{--                        <x-input.file-upload wire:model="newAvatar" id="photo">--}}
 {{--                            <span class="w-20 h-20 rounded-full overflow-hidden bg-gray-100">--}}
@@ -42,6 +42,7 @@
 {{--                                @endif--}}
 {{--                            </span>--}}
 {{--                        </x-input.file-upload>--}}
+
                     </x-input.group>
                 </div>
 
