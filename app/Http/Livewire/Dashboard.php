@@ -48,6 +48,11 @@ class Dashboard extends Component
         $this->editing = $this->makeBlankTransaction();
     }
 
+    public function updatedFilters()
+    {
+        $this->resetPage();
+    }
+
     public function sortBy($field)
     {
         if($this->sortField === $field) {
