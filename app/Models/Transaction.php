@@ -37,7 +37,7 @@ class Transaction extends Model
 
     public function getDateForEditingAttribute()
     {
-        return $this->date->format('m/d/Y');
+        return $this->date->format('d/m/Y');
     }
 
     public function setDateForEditingAttribute($value)
