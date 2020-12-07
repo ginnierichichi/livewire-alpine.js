@@ -11,6 +11,7 @@
                 <x-table.heading sortable wire:click="sortBy('amount')" :direction="$sortField === 'amount' ? $sortDirection : null" >Amount</x-table.heading>
                 <x-table.heading sortable wire:click="sortBy('status')" :direction="$sortField === 'status' ? $sortDirection : null" >Status</x-table.heading>
                 <x-table.heading sortable wire:click="sortBy('date')" :direction="$sortField === 'date' ? $sortDirection : null" >Date</x-table.heading>
+                <x-table.heading />
             </x-slot>
 
             <x-slot name="body">
@@ -43,6 +44,10 @@
                             {{$transaction->date_for_humans}}
                         </x-table.cell>
 
+                        <x-table.cell>
+                            <x-button.link wire:click="edit({{$transaction->id}})">Edit</x-button.link>
+                        </x-table.cell>
+
                     </x-table.row>
                 @empty
                     <x-table.row>
@@ -57,4 +62,32 @@
 
         {{ $transactions->links()  }}
     </div>
+
+    <form wire:submit.prevent="save">
+        <x-modal.dialog wire:model.defer="showEditModal">
+            <x-slot name="title">Edit Transaction</x-slot>
+
+            <x-slot name="content">
+                <x-input.group for="title" label="Title" :error="$errors->first('editing.title')">
+                    <x-input.text wire:model="editing.title" id="title" />
+                </x-input.group>
+
+                <x-input.group for="amount" label="Amount" :error="$errors->first('editing.amount')">
+                    <x-input.money wire:model="editing.amount" id="amount" />
+                </x-input.group>
+
+                <x-input.group for="status" label="Status" :error="$errors->first('editing.status')">
+                    <x-input.text wire:model="editing.status" id="status" />
+                </x-input.group>
+
+                <x-input.group for="date" label="Date" :error="$errors->first('editing.date')">
+                    <x-input.text wire:model="editing.date" id="date" />
+                </x-input.group>
+            </x-slot>
+            <x-slot name="footer">
+                <x-button.secondary>Cancel</x-button.secondary>
+                <x-button.primary type="submit">Save</x-button.primary>
+            </x-slot>
+        </x-modal.dialog>
+    </form>
 </div>

@@ -19,7 +19,15 @@ class Dashboard extends Component
      * @var mixed
      */
     public $sortDirection = 'desc';
+    public $showEditModal = false;
+    public $editing;
 
+    protected $rules = [
+        'editing.title' => 'required',
+        'editing.amount' => 'required',
+        'editing.status' => 'required',
+        'editing.date' => 'required',
+    ];
     protected $queryString = ['sortField', 'sortDirection'];
 
 
@@ -31,6 +39,19 @@ class Dashboard extends Component
             $this->sortDirection = 'asc';
         }
         $this->sortField = $field;
+    }
+
+    public function edit(Transaction $transaction)
+    {
+        $this->editing = $transaction;
+        $this->showEditModal = true;
+    }
+
+    public function save()
+    {
+        $this->validate();
+        $this->editing->save();
+        $this->showEditModal = false;
     }
 
     public function render()

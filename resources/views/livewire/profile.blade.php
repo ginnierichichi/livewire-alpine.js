@@ -1,4 +1,4 @@
-<div class="w-full bg-white overflow-hidden shadow-xl sm:rounded-lg">
+<div class="w-full bg-white my-12 overflow-hidden shadow-xl sm:rounded-lg">
        <div class="p-6">
             <h1 class="text-2xl font-semibold text-gray-900">Profile</h1>
 

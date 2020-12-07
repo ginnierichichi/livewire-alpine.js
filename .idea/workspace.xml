@@ -14,7 +14,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e48d078-b3ca-4c6e-93e2-a49e5954c05e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../livewire/.idea/livewire.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../livewire/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ovia/.idea/ovia.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/Laravel_27_11_2020__09_48.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/porzio.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/database/factories/TransactionFactory.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/img/surgelogo.svg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/webfonts/fa-brands-400.eot" afterDir="false" />
@@ -34,16 +45,22 @@
       <change afterPath="$PROJECT_DIR$/public/webfonts/fa-solid-900.woff2" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/button.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/button/link.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/button/primary.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/button/secondary.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/icon/cash.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/icon/inbox.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/date.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/file-upload.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/filepond.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/group.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/input/money.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/rich-text.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/text.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/textarea.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/modal.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/modal/confirmation.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/modal/dialog.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/notification.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/table.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/table/cell.blade.php" afterDir="false" />
@@ -193,7 +210,9 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -224,7 +243,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606470458183</updated>
-      <workItem from="1606470459528" duration="75796000" />
+      <workItem from="1606470459528" duration="82089000" />
     </task>
     <servers />
   </component>
@@ -251,10 +270,10 @@
       <screen x="-5120" y="-325" width="2560" height="1415" />
     </state>
     <state x="-4102" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1606483158199" />
-    <state x="-4075" y="264" key="NewPhpFileDialog" timestamp="1607009179463">
+    <state x="-4075" y="264" key="NewPhpFileDialog" timestamp="1607350964853">
       <screen x="-5120" y="-325" width="2560" height="1415" />
     </state>
-    <state x="-4075" y="264" key="NewPhpFileDialog/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1607009179463" />
+    <state x="-4075" y="264" key="NewPhpFileDialog/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1607350964853" />
     <state x="-4294" y="-15" width="838" height="1032" key="search.everywhere.popup" timestamp="1607008574721">
       <screen x="-5120" y="-325" width="2560" height="1415" />
     </state>

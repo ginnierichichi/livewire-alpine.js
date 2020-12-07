@@ -20,15 +20,11 @@ class Transaction extends Model
     protected $casts = ['date' => 'date'];
     protected $appends = ['date_for_editing'];
 
-//    /**
-//     * @var mixed
-//     */
-//    private $date;
 
     public function getStatusColorAttribute()
     {
         return [
-                'processing' => 'orange',
+                'processing' => 'yellow',
                 'success' => 'green',
                 'failed' => 'red',
             ][strtolower($this->status)] ?? 'cool-gray';
