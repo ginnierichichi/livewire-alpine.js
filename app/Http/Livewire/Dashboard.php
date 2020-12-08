@@ -115,17 +115,22 @@ class Dashboard extends Component
     public function exportSelected()
     {
         return response()->streamDownload(function () {
-           echo Transaction::whereKey($this->selected)->toCsv();
+           echo $this->transactionsQuery
+               ->unless($this->selectAll, fn($query) => $query->whereKey($this->selected))
+               ->toCsv();
         }, 'transactions.csv');
     }
 
     public function deleteSelected()
     {
 //        $transactions = Transaction::whereKey($this->selected);
+//        $transactions = $this->selectAll
+//            ? $this->transactionsQuery
+//            : $this->transactionsQuery->whereKey($this->selected);
 
-        $transactions = $this->selectAll
-            ? $this->transactionsQuery
-            : $this->transactionsQuery->whereKey($this->selected);
+        $this->transactionsQuery
+            ->unless($this->selectAll, fn($query) => $query->whereKey($this->selected))
+            ->delete();
 
         $transactions->delete;
     }
