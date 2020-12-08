@@ -13,7 +13,7 @@
                         <i class="fas fa-download text-gray-400"></i><span>Export</span>
                     </x-dropdown.item>
 
-                    <x-dropdown.item type="button" wire:click="deleteSelected" class="space-x-2 flex justify-start">
+                    <x-dropdown.item type="button" wire:click="$toggle('showDeleteModal')" class="space-x-2 flex justify-start">
                         <i class="far fa-trash-alt text-gray-400"></i><span>Delete</span>
                     </x-dropdown.item>
                 </x-dropdown>
@@ -133,6 +133,21 @@
         {{ $transactions->links()  }}
     </div>
 
+    <!-------- DELETE MODAL --------->
+    <form wire:submit.prevent="deleteSelected">
+        <x-modal.confirmation wire:model.defer="showDeleteModal">
+            <x-slot name="title">Delete Transaction</x-slot>
+            <x-slot name="content">
+                Are you sure you want to delete?
+            </x-slot>
+            <x-slot name="footer">
+                <x-button.secondary wire:click="$set('showDeleteModal', false)">Cancel</x-button.secondary>
+                <x-button.primary type="submit">Delete</x-button.primary>
+            </x-slot>
+        </x-modal.confirmation>
+    </form>
+
+    <!-------- EDIT MODAL --------->
     <form wire:submit.prevent="save">
         <x-modal.dialog wire:model.defer="showEditModal">
             <x-slot name="title">Edit Transaction</x-slot>

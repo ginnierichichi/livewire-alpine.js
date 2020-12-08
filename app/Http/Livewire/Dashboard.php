@@ -20,6 +20,7 @@ class Dashboard extends Component
      */
     public $editing;
     public $sortDirection = 'desc';
+    public $showDeleteModal = false;
     public $showEditModal = false;
     public $showFilters = false;
     public $selectPage = false;
@@ -115,7 +116,7 @@ class Dashboard extends Component
     public function exportSelected()
     {
         return response()->streamDownload(function () {
-           echo $this->transactionsQuery
+           echo (clone $this->transactionsQuery)
                ->unless($this->selectAll, fn($query) => $query->whereKey($this->selected))
                ->toCsv();
         }, 'transactions.csv');
@@ -128,11 +129,11 @@ class Dashboard extends Component
 //            ? $this->transactionsQuery
 //            : $this->transactionsQuery->whereKey($this->selected);
 
-        $this->transactionsQuery
+        (clone $this->transactionsQuery)
             ->unless($this->selectAll, fn($query) => $query->whereKey($this->selected))
             ->delete();
 
-        $transactions->delete;
+        $this->showDeleteModal = false;
     }
 
     public function resetFilters()
