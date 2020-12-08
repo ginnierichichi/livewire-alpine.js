@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Http\Livewire\DataTable\WithSorting;
 use Carbon\Carbon;
 use Livewire\Component;
 use App\Models\Transaction;
@@ -9,17 +10,13 @@ use Livewire\WithPagination;
 
 class Dashboard extends Component
 {
-    use WithPagination;
+    use WithPagination, WithSorting;
+
 
     /**
      * @var mixed
      */
-    public $sortField = 'title';
-    /**
-     * @var mixed
-     */
-    public $editing;
-    public $sortDirection = 'desc';
+    public Transaction $editing;
     public $showDeleteModal = false;
     public $showEditModal = false;
     public $showFilters = false;
@@ -36,7 +33,7 @@ class Dashboard extends Component
     ];
 
 
-    protected $queryString = ['sortField', 'sortDirection'];
+//    protected $queryString = ['sortField', 'sortDirection'];
 
     public function rules()
     {
@@ -77,16 +74,6 @@ class Dashboard extends Component
     public function selectAll()
     {
         $this->selectAll = true;
-    }
-
-    public function sortBy($field)
-    {
-        if($this->sortField === $field) {
-            $this->sortDirection = $this->sortDirection === 'asc' ? 'desc' : 'asc';
-        } else {
-            $this->sortDirection = 'asc';
-        }
-        $this->sortField = $field;
     }
 
     public function makeBlankTransaction()
@@ -143,14 +130,15 @@ class Dashboard extends Component
 
     public function getTransactionsQueryProperty()
     {
-        return Transaction::query()
+        $query = Transaction::query()
             ->when($this->filters['status'], fn($query, $status) => $query->where('status', $status))
             ->when($this->filters['amount-min'], fn($query, $amount) => $query->where('amount','>=', $amount))
             ->when($this->filters['amount-max'], fn($query, $amount) => $query->where('amount','<=', $amount))
             ->when($this->filters['date-min'], fn($query, $date) => $query->where('date','>=', Carbon::parse($date)))
             ->when($this->filters['date-max'], fn($query, $date) => $query->where('date','<=', Carbon::parse($date)))
-            ->when($this->filters['search'], fn($query, $search) => $query->where('title','like','%'. $search. '%'))
-            ->orderBy($this->sortField, $this->sortDirection);
+            ->when($this->filters['search'], fn($query, $search) => $query->where('title','like','%'. $search. '%'));
+
+        return $this->applySorting($query);
 
     }
 

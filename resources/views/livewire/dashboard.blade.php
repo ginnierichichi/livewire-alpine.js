@@ -2,6 +2,7 @@
     {{-- To attain knowledge, add things every day; To attain wisdom, subtract things every day --}}
     <h1 class="text-2xl font-semibold text-gray-900">Dashboard</h1>
     <div class="py-4 space-y-4 ">
+        <!---------- Top Bar ---------->
         <div class="flex justify-between">
             <div class="flex items-center">
                 <x-input.text wire:model="filters.search" placeholder="Search Transactions..."></x-input.text>
@@ -20,6 +21,7 @@
                 <x-button.primary wire:click="create"><i class="fas fa-plus-circle pr-2"></i>New</x-button.primary>
             </div>
         </div>
+        <!---------- Advanced Search ---------->
         <div>
             <div>
                 @if($showFilters)
@@ -58,13 +60,15 @@
                 @endif
             </div>
         </div>
+
+        <!---------- Transactions Table ---------->
         <x-table>
             <x-slot name="head">
                 <x-table.heading class="pr-0 w-8"><x-input.checkbox  wire:model="selectPage"/></x-table.heading>
-                <x-table.heading sortable wire:click="sortBy('title')" :direction="$sortField === 'title' ? $sortDirection : null" class="pl-0">Title</x-table.heading>
-                <x-table.heading sortable wire:click="sortBy('amount')" :direction="$sortField === 'amount' ? $sortDirection : null" >Amount</x-table.heading>
-                <x-table.heading sortable wire:click="sortBy('status')" :direction="$sortField === 'status' ? $sortDirection : null" >Status</x-table.heading>
-                <x-table.heading sortable wire:click="sortBy('date')" :direction="$sortField === 'date' ? $sortDirection : null" >Date</x-table.heading>
+                <x-table.heading sortable multi-column wire:click="sortBy('title')" :direction="$sorts['title' ]?? null" class="pl-0">Title</x-table.heading>
+                <x-table.heading sortable multi-column wire:click="sortBy('amount')" :direction="$sorts['amount'] ?? null" >Amount</x-table.heading>
+                <x-table.heading sortable multi-column wire:click="sortBy('status')" :direction="$sorts['status'] ?? null" >Status</x-table.heading>
+                <x-table.heading sortable multi-column wire:click="sortBy('date')" :direction="$sorts['date'] ?? null" >Date</x-table.heading>
                 <x-table.heading />
             </x-slot>
 
@@ -133,7 +137,7 @@
         {{ $transactions->links()  }}
     </div>
 
-    <!-------- DELETE MODAL --------->
+    <!-------- DELETE TRANSACTIONS MODAL --------->
     <form wire:submit.prevent="deleteSelected">
         <x-modal.confirmation wire:model.defer="showDeleteModal">
             <x-slot name="title">Delete Transaction</x-slot>
@@ -147,7 +151,7 @@
         </x-modal.confirmation>
     </form>
 
-    <!-------- EDIT MODAL --------->
+    <!-------- EDIT TRANSACTIONS MODAL --------->
     <form wire:submit.prevent="save">
         <x-modal.dialog wire:model.defer="showEditModal">
             <x-slot name="title">Edit Transaction</x-slot>
