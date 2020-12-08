@@ -22,7 +22,7 @@
         </div>
     </div>
 @else
-    <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+    <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start">
         <label for="username" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
             {{$label}}
         </label>

@@ -26,6 +26,7 @@
       <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/porzio.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/DataTable/WithPerPagePagination.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/Http/Livewire/DataTable/WithSorting.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/database/factories/TransactionFactory.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/img/surgelogo.svg" afterDir="false" />
@@ -249,7 +250,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606470458183</updated>
-      <workItem from="1606470459528" duration="102971000" />
+      <workItem from="1606470459528" duration="104990000" />
     </task>
     <servers />
   </component>
@@ -280,10 +281,10 @@
       <screen x="-5120" y="-325" width="2560" height="1415" />
     </state>
     <state x="-4147" y="166" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1607437563461" />
-    <state x="-4075" y="264" key="NewPhpFileDialog" timestamp="1607437578371">
+    <state x="-4075" y="264" key="NewPhpFileDialog" timestamp="1607442871043">
       <screen x="-5120" y="-325" width="2560" height="1415" />
     </state>
-    <state x="-4075" y="264" key="NewPhpFileDialog/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1607437578371" />
+    <state x="-4075" y="264" key="NewPhpFileDialog/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1607442871043" />
     <state x="-4294" y="-15" width="838" height="1032" key="search.everywhere.popup" timestamp="1607431630052">
       <screen x="-5120" y="-325" width="2560" height="1415" />
     </state>

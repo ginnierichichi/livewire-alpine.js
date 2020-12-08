@@ -8,7 +8,17 @@
                 <x-input.text wire:model="filters.search" placeholder="Search Transactions..."></x-input.text>
                 <x-button.link wire:click="$toggle('showFilters')" class="pl-4">@if($showFilters) Hide @endif Advanced Search...</x-button.link>
             </div>
-            <div >
+
+            <div class="space-x-2 flex items-center">
+                <div class="sm:border-none sm:p-0">
+                    <x-input.group class="sm:border-transparent sm:p-0" borderless paddingless for="perPage" label="Per Page">
+                        <x-input.select wire:model="perPage" id="perPage">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                        </x-input.select>
+                    </x-input.group>
+                </div>
                 <x-dropdown label="Bulk Actions">
                     <x-dropdown.item type="button" wire:click="exportSelected" class="space-x-2 flex justify-start">
                         <i class="fas fa-download text-gray-400"></i><span>Export</span>

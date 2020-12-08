@@ -2,22 +2,22 @@
 
 namespace App\Http\Livewire;
 
-use App\Http\Livewire\DataTable\WithSorting;
 use Carbon\Carbon;
 use Livewire\Component;
 use App\Models\Transaction;
 use Livewire\WithPagination;
+use App\Http\Livewire\DataTable\WithSorting;
+use App\Http\Livewire\DataTable\WithPerPagePagination;
 
 class Dashboard extends Component
 {
-    use WithPagination, WithSorting;
-
+    use WithPerPagePagination, WithSorting;
 
     /**
      * @var mixed
      */
     public Transaction $editing;
-    public $showDeleteModal = false;
+    public bool $showDeleteModal = false;
     public $showEditModal = false;
     public $showFilters = false;
     public $selectPage = false;
@@ -33,7 +33,7 @@ class Dashboard extends Component
     ];
 
 
-//    protected $queryString = ['sortField', 'sortDirection'];
+    protected $queryString = [];
 
     public function rules()
     {
@@ -144,7 +144,7 @@ class Dashboard extends Component
 
     public function getTransactionsProperty()
     {
-        return $this->transactionsQuery->paginate(10);
+        return $this->applyPagination($this->transactionsQuery);
     }
     public function render()
     {
