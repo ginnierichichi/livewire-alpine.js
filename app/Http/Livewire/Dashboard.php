@@ -18,10 +18,11 @@ class Dashboard extends Component
     /**
      * @var mixed
      */
+    public $editing;
     public $sortDirection = 'desc';
     public $showEditModal = false;
-    public $editing;
     public $showFilters = false;
+    public $selected = [];
     public $filters = [
       'search' => '',
       'status' => '',
@@ -30,6 +31,7 @@ class Dashboard extends Component
       'date-min' => null,
       'date-max' => null,
     ];
+
 
     protected $queryString = ['sortField', 'sortDirection'];
 

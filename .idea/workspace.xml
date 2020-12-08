@@ -48,8 +48,10 @@
       <change afterPath="$PROJECT_DIR$/resources/views/components/button/link.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/button/primary.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/button/secondary.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/dropdown/item.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/icon/cash.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/icon/inbox.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/input/checkbox.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/date.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/file-upload.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/input/filepond.blade.php" afterDir="false" />
@@ -244,7 +246,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606470458183</updated>
-      <workItem from="1606470459528" duration="89171000" />
+      <workItem from="1606470459528" duration="91162000" />
     </task>
     <servers />
   </component>
@@ -263,18 +265,18 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="-4131" y="124" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606999095709">
+    <state x="-4131" y="124" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607417892228">
       <screen x="-5120" y="-325" width="2560" height="1415" />
     </state>
-    <state x="-4131" y="124" key="#com.intellij.fileTypes.FileTypeChooser/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1606999095709" />
+    <state x="-4131" y="124" key="#com.intellij.fileTypes.FileTypeChooser/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1607417892228" />
     <state x="-4102" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606483158199">
       <screen x="-5120" y="-325" width="2560" height="1415" />
     </state>
     <state x="-4102" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1606483158199" />
-    <state x="-4075" y="264" key="NewPhpFileDialog" timestamp="1607351391550">
+    <state x="-4075" y="264" key="NewPhpFileDialog" timestamp="1607417923327">
       <screen x="-5120" y="-325" width="2560" height="1415" />
     </state>
-    <state x="-4075" y="264" key="NewPhpFileDialog/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1607351391550" />
+    <state x="-4075" y="264" key="NewPhpFileDialog/-2560.-194.2560.1415/-5120.-325.2560.1415/0.25.1680.1025@-5120.-325.2560.1415" timestamp="1607417923327" />
     <state x="-4294" y="-15" width="838" height="1032" key="search.everywhere.popup" timestamp="1607353392059">
       <screen x="-5120" y="-325" width="2560" height="1415" />
     </state>
