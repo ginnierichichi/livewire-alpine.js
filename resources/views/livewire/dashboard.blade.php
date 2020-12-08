@@ -8,8 +8,14 @@
                 <x-button.link wire:click="$toggle('showFilters')" class="pl-4">@if($showFilters) Hide @endif Advanced Search...</x-button.link>
             </div>
             <div >
-                <x-dropdown>
-                    <x-button.primary wire:click="create"><i class="fas fa-plus-circle pr-2"></i>New</x-button.primary>
+                <x-dropdown label="Bulk Actions">
+                    <x-dropdown.item type="button" wire:click="exportSelected" class="space-x-2 flex justify-start">
+                        <i class="fas fa-download text-gray-400"></i><span>Export</span>
+                    </x-dropdown.item>
+
+                    <x-dropdown.item type="button" wire:click="deleteSelected" class="space-x-2 flex justify-start">
+                        <i class="far fa-trash-alt text-gray-400"></i><span>Delete</span>
+                    </x-dropdown.item>
                 </x-dropdown>
                 <x-button.primary wire:click="create"><i class="fas fa-plus-circle pr-2"></i>New</x-button.primary>
             </div>
@@ -54,7 +60,7 @@
         </div>
         <x-table>
             <x-slot name="head">
-                <x-table.heading class="pr-0 w-8"><x-input.checkbox /></x-table.heading>
+                <x-table.heading class="pr-0 w-8"><x-input.checkbox  wire:model="selectPage"/></x-table.heading>
                 <x-table.heading sortable wire:click="sortBy('title')" :direction="$sortField === 'title' ? $sortDirection : null" class="pl-0">Title</x-table.heading>
                 <x-table.heading sortable wire:click="sortBy('amount')" :direction="$sortField === 'amount' ? $sortDirection : null" >Amount</x-table.heading>
                 <x-table.heading sortable wire:click="sortBy('status')" :direction="$sortField === 'status' ? $sortDirection : null" >Status</x-table.heading>
@@ -63,9 +69,22 @@
             </x-slot>
 
             <x-slot name="body">
+
+                @if($selectPage)
+                <x-table.row class="bg-gray-100" wire:key="row-message">
+                    <x-table.cell colspan="6">
+                        @unless($selectAll)
+                            <span>You have selected <strong>{{ $transactions->count() }}</strong> transactions, do you want to select all <strong>{{ $transactions->total() }}</strong>?</span>
+                            <x-button.link wire:click="selectAll" class="ml-1 hover:text-blue-700">Select All</x-button.link>
+                        @else
+                           <span>You have selected all <strong>{{ $transactions->total() }}</strong> transactions.</span>
+                        @endif
+                    </x-table.cell>
+                </x-table.row>
+                @endif
                 @forelse ($transactions as $transaction)
                     <x-table.row wire:loading.class.delay="opacity-50" wire:key="row-{{ $transaction->id }}" >
-                        <x-table.cell class="p-0 m-0 shadow-none">
+                        <x-table.cell class="p-0 m-0 shadow-none" >
                             <x-input.checkbox wire:model="selected" value="{{ $transaction->id }}"/>
                         </x-table.cell>
                         <x-table.cell class="pl-0">
