@@ -2,16 +2,18 @@
 
 namespace App\Http\Livewire;
 
+
 use Carbon\Carbon;
 use Livewire\Component;
 use App\Models\Transaction;
 use Livewire\WithPagination;
 use App\Http\Livewire\DataTable\WithSorting;
+use App\Http\Livewire\DataTable\WithCachedRows;
 use App\Http\Livewire\DataTable\WithPerPagePagination;
 
 class Dashboard extends Component
 {
-    use WithPerPagePagination, WithSorting;
+    use WithPerPagePagination, WithSorting, WithCachedRows;
 
     /**
      * @var mixed
@@ -81,14 +83,22 @@ class Dashboard extends Component
         return  Transaction::make(['date' => now(), 'status' => 'success']);
     }
 
+    public function toggleShowFilters()
+    {
+        $this->useCachedRows();
+        $this->showFilters = !$this->showFilters;
+    }
+
     public function create()
     {
+        $this->useCachedRows();
         if ($this->editing->getKey()) $this->editing = $this->makeBlankTransaction();
         $this->showEditModal = true;
     }
 
     public function edit(Transaction $transaction)
     {
+        $this->useCachedRows();
         if($this->editing->isNot($transaction)) $this->editing = $transaction;
         $this->showEditModal = true;
     }
@@ -144,7 +154,10 @@ class Dashboard extends Component
 
     public function getTransactionsProperty()
     {
-        return $this->applyPagination($this->transactionsQuery);
+        return $this->cache(function () {
+            return $this->applyPagination($this->transactionsQuery);
+        });
+
     }
     public function render()
     {
