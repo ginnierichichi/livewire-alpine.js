@@ -28,6 +28,9 @@
                         <i class="far fa-trash-alt text-gray-400"></i><span>Delete</span>
                     </x-dropdown.item>
                 </x-dropdown>
+
+                <livewire:import-transactions />
+
                 <x-button.primary wire:click="create"><i class="fas fa-plus-circle pr-2"></i>New</x-button.primary>
             </div>
         </div>
